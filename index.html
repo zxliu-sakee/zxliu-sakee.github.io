@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The personal homepage of Zixuan Liu.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Zixuan Liu</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      color-scheme: light;
+      --accent: #b61032;
+      --link: #0866c2;
+      --ink: #161616;
+      --rule: #b9b9b9;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      max-width: 1070px;
+      margin: 0 auto;
+      padding: 58px 28px 64px;
+      background: #fff;
+      color: var(--ink);
+      font-family: Arial, "Noto Sans", "Microsoft YaHei", sans-serif;
+      font-size: 18px;
+      line-height: 1.52;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover, a:focus-visible { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 242px minmax(0, 1fr);
+      align-items: start;
+      column-gap: clamp(52px, 9vw, 112px);
+      margin: 0 4px 68px;
+    }
+
+    .portrait {
+      display: block;
+      width: 242px;
+      aspect-ratio: 242 / 294;
+      object-fit: cover;
+      object-position: center 24%;
+      border-radius: 10px;
+    }
+
+    h1, h2, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 15px;
+      color: var(--accent);
+      font-size: clamp(27px, 3vw, 32px);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .intro-copy { padding-top: 1px; }
+    .intro-copy p { margin: 0 0 20px; }
+    .intro-copy .identity { font-size: 21px; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 25px; }
+    .links a { font-weight: 600; }
+
+    section { margin-bottom: 58px; }
+    h2 {
+      margin: 0 0 18px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--accent);
+      font-size: 29px;
+      line-height: 1.3;
+    }
+
+    section p { max-width: 920px; }
+    .photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: 18px; }
+    .photo-grid img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; }
+    footer { border-top: 1px solid #ddd; padding-top: 16px; color: #666; font-size: 14px; }
+
+    @media (max-width: 650px) {
+      body { padding: 30px 20px 44px; font-size: 17px; }
+      .intro { grid-template-columns: 1fr; gap: 24px; margin: 0 0 50px; }
+      .portrait { width: min(242px, 70vw); }
+      .intro-copy p { margin-bottom: 14px; }
+      h2 { font-size: 26px; }
+      section { margin-bottom: 45px; }
+      .photo-grid { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <img class="portrait" src="photo.png" alt="Portrait of Zixuan Liu" width="242" height="294">
+      <div class="intro-copy">
+        <h1>Zixuan Liu</h1>
+        <p class="identity"><em>Ph.D. Student</em></p>
+        <p><a href="https://informatics.xmu.edu.cn/en/" target="_blank" rel="noopener noreferrer">School of Informatics</a><br>
+          <a href="https://en.xmu.edu.cn/" target="_blank" rel="noopener noreferrer">Xiamen University</a></p>
+        <p>Email: <a href="mailto:lzx119229@gmail.com">lzx119229@gmail.com</a></p>
+        <div class="links">
+          <a href="https://github.com/zxliu-sakee" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="biography-title">
+      <h2 id="biography-title">Biography</h2>
+      <p>I am a Ph.D. student at the School of Informatics, Xiamen University. My research interests include computer vision and image processing.</p>
+    </section>
+
+    <section aria-labelledby="photos-title">
+      <h2 id="photos-title">Photos</h2>
+      <div class="photo-grid">
+        <img src="photo-evening.png" alt="Zixuan Liu by the waterfront at night" width="260" height="347" loading="lazy">
+        <img src="photo-casual.png" alt="Casual portrait of Zixuan Liu" width="260" height="347" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year">2026</span> Zixuan Liu</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
