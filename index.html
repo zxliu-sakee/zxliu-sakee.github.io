@@ -79,6 +79,13 @@
     }
 
     section p { max-width: 920px; }
+    .publications { display: grid; gap: 34px; }
+    .publication { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 28px; align-items: start; }
+    .publication img { display: block; width: 100%; height: 190px; object-fit: contain; border: 1px solid #e3e3e3; background: #fff; }
+    .publication h3 { margin: 0 0 4px; font-size: 19px; line-height: 1.35; font-weight: 700; }
+    .publication p { margin: 0; line-height: 1.42; }
+    .venue-tag { display: inline-block; margin-right: 9px; padding: 1px 7px; background: var(--link); color: #fff; font-size: 15px; font-weight: 400; vertical-align: 2px; }
+    .publication-links { margin-top: 4px !important; }
     .photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: 18px; }
     .photo-grid img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; }
     footer { border-top: 1px solid #ddd; padding-top: 16px; color: #666; font-size: 14px; }
@@ -90,6 +97,8 @@
       .intro-copy p { margin-bottom: 14px; }
       h2 { font-size: 26px; }
       section { margin-bottom: 45px; }
+      .publication { grid-template-columns: 1fr; gap: 12px; }
+      .publication img { max-width: 300px; }
       .photo-grid { gap: 12px; }
     }
   </style>
@@ -113,6 +122,30 @@
     <section aria-labelledby="biography-title">
       <h2 id="biography-title">Biography</h2>
       <p>I am a Ph.D. student at the School of Informatics, Xiamen University. My research interests include computer vision and image processing.</p>
+    </section>
+
+    <section aria-labelledby="publications-title">
+      <h2 id="publications-title">Selected Publications</h2>
+      <div class="publications">
+        <article class="publication">
+          <a href="paper-ds-mamba.png" target="_blank" rel="noopener noreferrer" aria-label="View full DS-Mamba figure"><img src="paper-ds-mamba.png" alt="DS-Mamba model architecture" width="240" height="190" loading="lazy"></a>
+          <div>
+            <h3><span class="venue-tag">BSPC'26</span><a href="https://doi.org/10.1016/j.bspc.2026.109783" target="_blank" rel="noopener noreferrer">DS-Mamba: Dynamic snake visual state space model for vessel segmentation</a></h3>
+            <p><strong>Zixuan Liu</strong>, Yao Cheng, Zhaoqin Huang, Wanqiang Cai, Kidiyo Kpalma, Dengwang Li, Hua Lu</p>
+            <p><em>Biomedical Signal Processing and Control</em>, 119: 109783, 2026</p>
+            <p class="publication-links"><a href="https://doi.org/10.1016/j.bspc.2026.109783" target="_blank" rel="noopener noreferrer">[Paper]</a></p>
+          </div>
+        </article>
+        <article class="publication">
+          <a href="paper-dshr-net.png" target="_blank" rel="noopener noreferrer" aria-label="View full DSHR-Net figure"><img src="paper-dshr-net.png" alt="DSHR-Net model architecture" width="240" height="190" loading="lazy"></a>
+          <div>
+            <h3><span class="venue-tag">TIM'25</span><a href="https://doi.org/10.1109/TIM.2025.3619676" target="_blank" rel="noopener noreferrer">DSHR-Net: A Deep Snake High-Resolution Network for Dorsal Hand Vein Segmentation</a></h3>
+            <p>Hua Lu, <strong>Zixuan Liu</strong>, Tuo Li, Xiaofeng Zou, Yao Cheng, Yang Yu, Dengwang Li</p>
+            <p><em>IEEE Transactions on Instrumentation and Measurement</em>, 74: 5047515, 2025</p>
+            <p class="publication-links"><a href="https://doi.org/10.1109/TIM.2025.3619676" target="_blank" rel="noopener noreferrer">[Paper]</a></p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section aria-labelledby="photos-title">
